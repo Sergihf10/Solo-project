@@ -1,0 +1,83 @@
+section {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  place-items: center;
+  overflow: hidden;
+  background-image: url('../images/cut.jpg');
+}
+
+input[name='logintext'],
+input[name='loginpassword'] {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 80px;
+  font-size: 40px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+input[name='logintext'],
+input[name='loginpassword'] {
+  text-align: left;
+  margin-top: 30px;
+}
+input[name='logintext'],
+input[name='loginpassword'],
+.loginbutton {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+
+img.logo {
+  width: 50%;
+  border-radius: 50%;
+}
+
+.login {
+  position: relative;
+  width: 500px;
+  height: 700px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+}
+
+.loginbutton {
+  color: rgb(7, 5, 5);
+  margin-top: 50px;
+  margin-left: 100px;
+  height: 60px;
+  width: 200px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.5s;
+}
+
+button:hover {
+  box-shadow: none;
+}
+
+.brand-title {
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}

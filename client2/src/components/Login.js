@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from './UserContext';
+import '../styles/Login.css';
+import logo from '../images/logo.png';
 
 function Login() {
   let navigate = useNavigate();
@@ -30,28 +32,37 @@ function Login() {
   };
 
   return (
-    <section>
-      <h1>Login</h1>
-      <form className="loginForm" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Enter your email here"
-          name="email"
-          value={emailLogin}
-          onChange={handleEmail}
-        ></input>
-        <input
-          type="password"
-          placeholder="Enter your password here"
-          name="password"
-          value={passwordLogin}
-          onChange={handlePassword}
-        ></input>
-        <button className="buttons" type="submit">
-          Login
-        </button>
-      </form>
-    </section>
+    <div>
+      <section>
+        <form className="login" onSubmit={handleSubmit}>
+          <div className="brand-title">TheBarberShop</div>
+          <div className="imgcontainer">
+            <img src={logo} alt="logo" className="logo"></img>
+          </div>
+          <div className="container2">
+            <input
+              type="text"
+              placeholder="Enter your email here"
+              name="logintext"
+              value={emailLogin}
+              onChange={handleEmail}
+              required
+            ></input>
+            <input
+              type="password"
+              placeholder="Enter your password here"
+              name="loginpassword"
+              value={passwordLogin}
+              onChange={handlePassword}
+              required
+            ></input>
+            <button className="loginbutton" type="submit">
+              Login
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
   );
 }
 

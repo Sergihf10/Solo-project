@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/AppointmentDeleted.css';
 
 function AppointmentDeleted() {
   let navigate = useNavigate();
@@ -7,10 +8,11 @@ function AppointmentDeleted() {
   const clickHandler = () => {
     navigate('/profile');
   };
+
+  setTimeout(clickHandler, 3000);
   return (
-    <div>
+    <div className="appointmentdeleted">
       <h1>Appointment successfully deleted</h1>
-      <button onClick={clickHandler}>Go back to my profile</button>
     </div>
   );
 }

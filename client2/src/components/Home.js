@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Home.css'
+import '../styles/Home.css';
 
 function Home() {
   return (
-    <div className='Home'>
+    <div className="Home">
       <h1>Welcome to TheBarberShop</h1>
       <h2>
         Already a member?
@@ -18,26 +18,33 @@ function Home() {
           <Link to="/register">Register here</Link>
         </button>
       </h2>
-			<div class="wrapper">
-  <div class="icon facebook">
-    <div class="tooltip">Facebook</div>
-    <span><i class="fab fa-facebook-f"></i></span>
-  </div>
-  <div class="icon twitter">
-    <div class="tooltip">Twitter</div>
-    <span><i class="fab fa-twitter"></i></span>
-  </div>
-  <div class="icon instagram">
-    <div class="tooltip">Instagram</div>
-    <span><i class="fab fa-instagram"></i></span>
-  </div>
-  <div class="icon youtube">
-    <div class="tooltip">Youtube</div>
-    <span><i class="fab fa-youtube"></i></span>
-  </div>
-</div>
+      <div className="wrapper">
+        <div className="icon facebook">
+          <div className="tooltip">Facebook</div>
+          <span>
+            <i className="fab fa-facebook-f"></i>
+          </span>
+        </div>
+        <div className="icon twitter">
+          <div className="tooltip">Twitter</div>
+          <span>
+            <i className="fab fa-twitter"></i>
+          </span>
+        </div>
+        <div className="icon instagram">
+          <div className="tooltip">Instagram</div>
+          <span>
+            <i className="fab fa-instagram"></i>
+          </span>
+        </div>
+        <div className="icon youtube">
+          <div className="tooltip">Youtube</div>
+          <span>
+            <i className="fab fa-youtube"></i>
+          </span>
+        </div>
+      </div>
     </div>
-
   );
 }
 

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from './UserContext';
 import apiService from '../ApiService';
+import '../styles/User.css';
 
 function User() {
   let navigate = useNavigate();
@@ -28,9 +29,9 @@ function User() {
   };
 
   return (
-    <div>
-      <h1>Hello {userInfo.name}!</h1>
-      <div className="buttons">
+    <div className='userbackground'>
+      <h1>Welcome Mr. {userInfo.name}!</h1>
+      <div className="userbuttons">
         <button className="appointmentButton" onClick={handleNewAppointment}>
           Make a new appointment
         </button>

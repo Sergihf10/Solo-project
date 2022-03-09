@@ -1,0 +1,83 @@
+.modifyappointment {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url('../images/user.jpg');
+  box-shadow: inset 0 0 0 2000px rgba(15, 10, 13, 0.459);
+}
+
+.modifyappointment h1 {
+  font-size: 100px;
+  color: white;
+}
+
+.modifyappointment h2 {
+  position: absolute;
+  left: 15%;
+  top: 10%;
+  font-size: 80px;
+  color: white;
+}
+
+.modifyappointmentform {
+  width: 450px;
+  height: 550px;
+  border-radius: 5px;
+  margin: 2% auto;
+  padding: 2%;
+  background: url('../images/3415.jpeg');
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 40%;
+  top: 25%;
+}
+
+input[name='time'] {
+  width: 240px;
+  height: 30px;
+
+  margin-top: 60%;
+  padding: 15px;
+  position: relative;
+  left: 13%;
+
+  font-size: 16px;
+  font-family: 'Abel', sans-serif;
+  color: #5e6472;
+
+  outline: none;
+  border: none;
+
+  border-radius: 0px 5px 5px 0px;
+  transition: 0.2s linear;
+}
+
+.modifyappointmentbutton {
+  display: inline-block;
+  color: #252537;
+
+  width: 280px;
+  height: 50px;
+
+  padding: 0 20px;
+  background: #fff;
+  border-radius: 5px;
+
+  outline: none;
+  border: none;
+
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s linear;
+  font-size: 20px;
+  margin: 7% auto;
+  letter-spacing: 0.05em;
+  position: relative;
+  left: 13%;
+}
+.react-datepicker__input-container input {
+  font-size: 25px;
+  position: relative;
+  left: 13%;
+  font-family: 'Times New Roman', Times, serif;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/AppointmentCreated.css'
 
 function AppointmentCreated() {
   let navigate = useNavigate();
@@ -7,10 +8,11 @@ function AppointmentCreated() {
   const clickHandler = () => {
     navigate('/profile');
   };
+  setTimeout(clickHandler, 3000);
+
   return (
-    <div>
+    <div className='appointmentcreated'>
       <h1>Appointment successfully created</h1>
-      <button onClick={clickHandler}>Go back to my profile</button>
     </div>
   );
 }

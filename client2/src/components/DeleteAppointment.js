@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from './UserContext';
 import apiService from '../ApiService';
 import Moment from 'moment';
+import '../styles/DeleteAppointment.css';
 
 function DeleteAppointment() {
   let navigate = useNavigate();
@@ -36,14 +37,14 @@ function DeleteAppointment() {
   };
 
   return (
-    <div>
-      <h2>Delete your appointment</h2>
+    <div className="deleteappointment">
+      <h1>Delete your appointment</h1>
       <div>
-        <h3>
+        <h1>
           Your current appointment:
           {Moment(`${appointmentInfo.date}`).format('MMMM Do YYYY, h:mm:ss a')}
-        </h3>
-        <button onClick={deleteAppointmentHandler}>
+        </h1>
+        <button onClick={deleteAppointmentHandler} className="deletebutton">
           Delete my appointment
         </button>
       </div>

@@ -1,0 +1,26 @@
+.deleteappointment {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url('../images/cancelappointment.jpg');
+	font-size: 25px;
+	box-shadow: inset 0 0 0 2000px rgba(15, 10, 13, 0.459);
+	color: white;
+}
+
+.deletebutton {
+	font-size: 40px;
+	position: relative;
+	left: 35%;
+	cursor: pointer;
+	color: rgb(7, 5, 5);
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 400px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 40px;
+  font-weight: 900;
+  box-shadow: 6px 6px 6px black, -6px -6px 6px black;
+  transition: 0.5s;
+}

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { UserContext } from './UserContext';
 import apiService from '../ApiService';
 import Moment from 'moment';
+import '../styles/ModifyCalendar.css';
 
 function ModifyAppointment() {
   let navigate = useNavigate();
@@ -49,37 +50,32 @@ function ModifyAppointment() {
   };
 
   return (
-    <div className="appointment">
-      <div className="datePicker">
-        <h2>Modify the time of your appointment</h2>
-        <div>
-          <h3>
-            Your current appointment :
-            {Moment(`${appointmentInfo.date}`).format(
-              'MMMM Do YYYY, h:mm:ss a'
-            )}
-          </h3>
-        </div>
-        <DatePicker
-          showTimeSelect
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
-          minDate={new Date()}
-          dateFormat="dd/MM/yyyy"
-          filterDate={(date) => date.getDay() !== 7 && date.getDay()}
-          minTime={randomDate.setHours(9)}
-          maxTime={randomDate.setHours(16, 30)}
-          isClearable={true}
-          timeClassName={handleColor}
-        />
-      </div>
-      <div className="appointmentForm">
+    <div className="modifyappointment">
+      <h1>Modify the time of your appointment</h1>
+      <h2>
+        Your current appointment :
+        {Moment(`${appointmentInfo.date}`).format('MMMM Do YYYY, h:mm:ss a')}
+      </h2>
+      <div className="modifyappointmentform">
         <form onSubmit={modifyAppointmentHandler}>
+          <DatePicker
+            showTimeSelect
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            minDate={new Date()}
+            dateFormat="dd/MM/yyyy"
+            filterDate={(date) => date.getDay() !== 7 && date.getDay()}
+            minTime={randomDate.setHours(9)}
+            maxTime={randomDate.setHours(16, 30)}
+            timeClassName={handleColor}
+						placeholderText="Click to modify date"
+          />
           <input type="text" name="time" value={startDate}></input>
-          <button> Modify appointment</button>
+          <button className="modifyappointmentbutton">
+            Modify appointment
+          </button>
         </form>
       </div>
-      {console.log(startDate)}
     </div>
   );
 }

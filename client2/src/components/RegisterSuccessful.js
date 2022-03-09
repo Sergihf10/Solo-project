@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/Registered.css';
 
 function RegisterSuccessful() {
   let navigate = useNavigate();
@@ -7,10 +8,11 @@ function RegisterSuccessful() {
   const clickHandler = () => {
     navigate('/login');
   };
+
+  setTimeout(clickHandler, 3000);
   return (
-    <div>
-      <h1>You have successfully registered</h1>
-      <button onClick={clickHandler}>Go to my login page</button>
+    <div className="registered">
+      <h1 className="registeredtitle">You have successfully registered</h1>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useNavigate } from 'react-router-dom';
+import '../styles/Calendar.css';
 
 function AppointmentsCalendar({ setAppointments }) {
   let navigate = useNavigate();
@@ -46,34 +47,35 @@ function AppointmentsCalendar({ setAppointments }) {
 
   return (
     <div className="appointment">
-      <div className="datePicker">
-        <h2>Choose the time for your appointment</h2>
-        <DatePicker
-          showTimeSelect
-          selected={startDate}
-          onChange={(date) => setStartDate(date)}
-          minDate={new Date()}
-          dateFormat="dd/MM/yyyy"
-          filterDate={(date) => date.getDay() !== 7 && date.getDay()}
-          minTime={randomDate.setHours(9)}
-          maxTime={randomDate.setHours(16, 30)}
-          isClearable={true}
-          timeClassName={handleColor}
-        />
-      </div>
-      <div className="appointmentForm">
+      <h1>Choose the time for your appointment</h1>
+      <div className="appointmentform">
         <form onSubmit={submitAppointmentHandler}>
+          <div className="datePicker">
+            <DatePicker
+              placeholderText="Click to select date"
+              showTimeSelect
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              minDate={new Date()}
+              dateFormat="dd/MM/yyyy"
+              filterDate={(date) => date.getDay() !== 7 && date.getDay()}
+              minTime={randomDate.setHours(9)}
+              maxTime={randomDate.setHours(16, 30)}
+              timeClassName={handleColor}
+            />
+          </div>
+
           <input type="text" name="time" value={startDate}></input>
           <input
             type="text"
-            name="email"
+            name="appointmentemail"
             value={appointmentEmail}
             onChange={emailHandler}
+						placeholder="Enter your email"
           ></input>
-          <button> Create new appointment</button>
+          <button className='appointmentbutton'> Create new appointment</button>
         </form>
       </div>
-      {console.log(startDate)}
     </div>
   );
 }
